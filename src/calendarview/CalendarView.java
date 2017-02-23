@@ -28,9 +28,9 @@ import javafx.stage.Stage;
 
 public class CalendarView extends Application {
 
-	private final LocalTime firstSlotStart = LocalTime.of(0, 0);
-	private final Duration slotLength = Duration.ofMinutes(15);
-	private final LocalTime lastSlotStart = LocalTime.of(23, 59);
+	private final LocalTime firstSlotStart = LocalTime.of(7, 0);
+	private final Duration slotLength = Duration.ofMinutes(60);
+	private final LocalTime lastSlotStart = LocalTime.of(21, 0);
 	
 	private static final PseudoClass SELECTED_PSEUDO_CLASS = PseudoClass.getPseudoClass("selected");
 	
@@ -44,7 +44,7 @@ public class CalendarView extends Application {
 		
 		LocalDate today = LocalDate.now();
 		LocalDate startOfWeek = today.minusDays(today.getDayOfWeek().getValue() - 1) ;
-		LocalDate endOfWeek = startOfWeek.plusDays(6);
+		LocalDate endOfWeek = startOfWeek.plusDays(5);
 		
 		for (LocalDate date = startOfWeek; ! date.isAfter(endOfWeek); date = date.plusDays(1)) {
 			int slotIndex = 1 ;
