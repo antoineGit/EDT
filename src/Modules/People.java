@@ -1,16 +1,14 @@
 package Modules;
 
+import java.util.Date;
 
-import java.util.*;
-
-public class Employee {
+public abstract class People {
 
 	public String firstName;
 	public String lastName;
 	public Date birthDate;
-	public Departement departement;
 	
-	public Employee(){
+	public People(){
 		
 	}
 }

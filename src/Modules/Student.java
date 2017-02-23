@@ -17,6 +17,7 @@ public class Student {
 	public Date birthDate;
 	public Promo promo;
 	
+	
 
 	
 }

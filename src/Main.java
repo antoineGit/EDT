@@ -1,17 +1,22 @@
 
+import java.time.YearMonth;
 import java.util.ArrayList;
 
 import Modules.*;
+import calendarview.CalendarView;
+import calendarview.ViewCalendar;
+import calendarview.ViewCalendarTest;
+import javafx.stage.Stage;
 
 public class Main {
 
 	public static void main(String[] args){
-		Year y1 = new Year(2016, 2017);
-		Week w1 = new Week();
-		Week w2 = new Week();
-		ArrayList<Week> arrWeek = new ArrayList<>();
-		arrWeek.add(w2);
-		arrWeek.add(w1);
+		//Year y1 = new Year(2016, 2017);
+		//Week w1 = new Week();
+		//Week w2 = new Week();
+		//ArrayList<Week> arrWeek = new ArrayList<>();
+		//arrWeek.add(w2);
+		//arrWeek.add(w1);
 		
 		Building build = new Building("P", "Paris");
 		Room roomMido = new Room(build, 032, 50);
@@ -19,15 +24,15 @@ public class Main {
 		Employee sec = dir;
 		Departement dep = new Departement("MIDO","Math Info Decision Org", roomMido, dir, sec);
 
-		Course d1 = new Course(dir);
-		Course d2 = new Course(dir);
+		Course d1 = new Course("Probas", dir);
+		Course d2 = new Course("ADD",dir);
 		ArrayList<Course> arrCourses = new ArrayList<>();
 		arrCourses.add(d1);
 		arrCourses.add(d2);
 		
 
-		Semester s1 = new Semester(arrCourses, arrWeek);
-		Semester s2 = new Semester(arrCourses, arrWeek);
+		Semester s1 = new Semester(arrCourses);
+		Semester s2 = new Semester(arrCourses);
 		
 		Promo us = new Promo("MIAGE Info","Maths Info App Gestion Entre", dep ,3,40, s1, s2 );
 		Promo them = new Promo("MIAGE Math","Maths Info App Gestion Entre", dep,3,40, s1, s2);
@@ -45,10 +50,11 @@ public class Main {
 		classe.add(g1);
 		classe.add(g2);
 		
-		Course c1 = new Course(sec,classe);
-		Course c2 = new Course(dir, classe);
+		Course c1 = new Course("Probas",sec,classe);
+		Course c2 = new Course("ADD",dir, classe);
 	
-	
+		CalendarView view = new CalendarView();
+		view.main(null);
 	
 	
 	}

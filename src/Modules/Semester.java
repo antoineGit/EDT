@@ -4,12 +4,17 @@ import java.util.ArrayList;
 
 public class Semester {
 
-	public Semester(ArrayList<Course> disciplines, ArrayList<Week> weeks) {
+	public Semester(ArrayList<Course> disciplines) {
 		super();
 		this.disciplines = disciplines;
-		this.weeks = weeks;
+		
+	}
+	
+	public Semester() {
+		super();
+		this.disciplines = new ArrayList<>();
+		
 	}
 	public ArrayList<Course> disciplines;
-	public ArrayList<Week> weeks;
 	
 }
