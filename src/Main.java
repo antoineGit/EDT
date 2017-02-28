@@ -19,7 +19,7 @@ public class Main {
 		//arrWeek.add(w1);
 		
 		Building build = new Building("P", "Paris");
-		Room roomMido = new Room(build, 032, 50);
+		Room roomMido = new Room(032, 50);
 		Employee dir = new Employee();
 		Employee sec = dir;
 		Departement dep = new Departement("MIDO","Math Info Decision Org", roomMido, dir, sec);
@@ -40,11 +40,11 @@ public class Main {
 		Student moi = new Student("Antoine", "Auer", null, us);
 		Student toi = new Student("Vincent", "Fritsch", null, us);
 		Group g1 = new Group("Group 1", 1, 50);
-		g1.students.add(moi);
-		g1.students.add(toi);
+		g1.getStudents().add(moi);
+		g1.getStudents().add(toi);
 		Group g2 = new Group("Group 2", 2, 50);
-		g2.students.add(moi);
-		g2.students.add(toi);
+		g2.getStudents().add(moi);
+		g2.getStudents().add(toi);
 		
 		ArrayList<Group> classe = new ArrayList<>();
 		classe.add(g1);
