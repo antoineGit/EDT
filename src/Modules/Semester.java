@@ -7,7 +7,6 @@ public class Semester {
 	public Semester(ArrayList<Course> disciplines) {
 		super();
 		this.disciplines = disciplines;
-		
 	}
 	
 	public Semester() {
@@ -15,6 +14,17 @@ public class Semester {
 		this.disciplines = new ArrayList<>();
 		
 	}
-	public ArrayList<Course> disciplines;
+	private ArrayList<Course> disciplines;
+	public ArrayList<Course> getDisciplines() {
+		return disciplines;
+	}
+
+	public void setDisciplines(ArrayList<Course> disciplines) {
+		this.disciplines = disciplines;
+	}
+	
+	public void addDiscipline(Course c){
+		this.disciplines.add(c);
+	}
 	
 }

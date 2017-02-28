@@ -2,15 +2,25 @@ package Modules;
 
 public class Room {
 
-	public Room(Building build, int num, int capacity) {
+	public int getNum() {
+		return num;
+	}
+	public void setNum(int num) {
+		this.num = num;
+	}
+	public int getCapacity() {
+		return capacity;
+	}
+	public void setCapacity(int capacity) {
+		this.capacity = capacity;
+	}
+	public Room(int num, int capacity) {
 		super();
-		this.build = build;
 		this.num = num;
 		this.capacity = capacity;
 	}
 
-	public Building build;
-	public int num;
-	public int capacity;
+	private int num;
+	private int capacity;
 	
 }

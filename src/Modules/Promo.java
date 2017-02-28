@@ -20,6 +20,5 @@ public class Promo {
 		this.capacity = cap;
 		this.s1 = s1;
 		this.s2 = s2;
-		
 	}
 }
